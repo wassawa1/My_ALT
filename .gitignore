@@ -1,0 +1,9 @@
+# Python関連の不要ファイル
+__pycache__/
+*.py[cod]
+
+# テスト関連のキャッシュディレクトリ
+.pytest_cache/
+
+# VSCodeの設定ファイル
+.vscode/

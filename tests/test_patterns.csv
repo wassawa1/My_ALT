@@ -1,0 +1,8 @@
+input,expected,error
+"<30|A>","AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",False
+"<4|A>","AAAA",False
+"<2|B>","BB",False
+"<3|<2|B>A>","BBABBABBA",False
+"<3|<12|B>A","",True
+"<0|A>","",True
+"<2|<1|C>","CC",False

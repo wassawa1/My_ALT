@@ -16,7 +16,7 @@ class Expression:
     sub_expression: str
     value: str
 
-    PATTERN: str = r"^<([0-9]+)\|((\[0-9A-Z\<\>\ ]*)<([A-Z]*)>$"
+    PATTERN: str = r"^<([0-9]+)\|([0-9A-Z<\|>]*)(<[A-Z]+)>$"
 
     def __init__(self, _value: str) -> None:
         """
@@ -53,11 +53,15 @@ def execute(input_value: str) -> str:
         return str(e)
 
 def demonstrate(input_value: str) -> None:
+    """
+    Description: デモ用に式を評価し、結果を出力する。
+    """
     print("___________________")
     print("input: ", input_value)
     print("result: ", execute(input_value))
 
 if __name__ == "__main__":
+    # デモンストレーション用の入力例
     demonstrate("<30|A>")
     demonstrate("<30|A[aA]>")
     demonstrate("<3|<12|B>A>")
